@@ -78,7 +78,7 @@ exports.Resolver = function resolve(cases) {
             case "A":
                 dns.resolve4(cases[i].host, (err, ret) => {
                     if(err) {
-                        console.error(`${warning_level}\t${cases[i].type}\t\t${cases[i].host}\n\t> Record Does Not Exist`);
+                        console.error(`${warning_level}\t${cases[i].type}\t\t${cases[i].host}\n\t> Record Does Not Exist\n`);
                     } else {
                         console.log(matchOutput(cases[i].type, cases[i], ret))
                     }
@@ -87,7 +87,7 @@ exports.Resolver = function resolve(cases) {
             case "AAAA":
                 dns.resolve6(cases[i].host, (err, ret) => {
                     if(err) {
-                        console.error(`${warning_level}\t${cases[i].type}\t\t${cases[i].host}\n\t> Record Does Not Exist`);
+                        console.error(`${warning_level}\t${cases[i].type}\t\t${cases[i].host}\n\t> Record Does Not Exist\n`);
                     } else {
                         console.log(matchOutput(cases[i].type, cases[i], ret))
                     }
@@ -96,7 +96,7 @@ exports.Resolver = function resolve(cases) {
             case "CNAME":
                 dns.resolveCname(cases[i].host, (err, ret) => {
                     if(err) {
-                        console.error(`${warning_level}\t${cases[i].type}\t\t${cases[i].host}\n\t> Record Does Not Exist`);
+                        console.error(`${warning_level}\t${cases[i].type}\t\t${cases[i].host}\n\t> Record Does Not Exist\n`);
                     } else {
                         console.log(matchOutput(cases[i].type, cases[i], ret))
                     }
@@ -105,7 +105,7 @@ exports.Resolver = function resolve(cases) {
             case "CAA":
                 dns.resolveCaa(cases[i].host, (err, ret) => {
                     if(err) {
-                        console.error(`${warning_level}\t${cases[i].type}\t\t${cases[i].host}\n\t> Record Does Not Exist`);
+                        console.error(`${warning_level}\t${cases[i].type}\t\t${cases[i].host}\n\t> Record Does Not Exist\n`);
                     } else {
                         console.log(matchOutput(cases[i].type, cases[i], ret))
                     }
@@ -114,7 +114,7 @@ exports.Resolver = function resolve(cases) {
             case "MX":
                 dns.resolveMx(cases[i].host, (err, ret) => {
                     if(err) {
-                        console.error(`${warning_level}\t${cases[i].type}\t\t${cases[i].host}\n\t> Record Does Not Exist`);
+                        console.error(`${warning_level}\t${cases[i].type}\t\t${cases[i].host}\n\t> Record Does Not Exist\n`);
                     } else {
                         console.log(matchOutput(cases[i].type, cases[i], ret))
                     }
@@ -123,7 +123,7 @@ exports.Resolver = function resolve(cases) {
             case "NAPTR":
                 dns.resolveNaptr(cases[i].host, (err, ret) => {
                     if(err) {
-                        console.error(`${warning_level}\t${cases[i].type}\t\t${cases[i].host}\n\t> Record Does Not Exist`);
+                        console.error(`${warning_level}\t${cases[i].type}\t\t${cases[i].host}\n\t> Record Does Not Exist\n`);
                     } else {
                         console.log(matchOutput(cases[i].type, cases[i], ret))
                     }
@@ -132,7 +132,7 @@ exports.Resolver = function resolve(cases) {
             case "NS":
                 dns.resolveNs(cases[i].host, (err, ret) => {
                     if(err) {
-                        console.error(`${warning_level}\t${cases[i].type}\t\t${cases[i].host}\n\t> Record Does Not Exist`);
+                        console.error(`${warning_level}\t${cases[i].type}\t\t${cases[i].host}\n\t> Record Does Not Exist\n`);
                     } else {
                         console.log(matchOutput(cases[i].type, cases[i], ret))
                     }
@@ -141,7 +141,7 @@ exports.Resolver = function resolve(cases) {
             case "PTR":
                 dns.resolvePtr(cases[i].host, (err, ret) => {
                     if(err) {
-                        console.error(`${warning_level}\t${cases[i].type}\t\t${cases[i].host}\n\t> Record Does Not Exist`);
+                        console.error(`${warning_level}\t${cases[i].type}\t\t${cases[i].host}\n\t> Record Does Not Exist\n`);
                     } else {
                         console.log(matchOutput(cases[i].type, cases[i], ret))
                     }
@@ -150,7 +150,7 @@ exports.Resolver = function resolve(cases) {
             case "SOA":
                 dns.resolveSoa(cases[i].host, (err, ret) => {
                     if(err) {
-                        console.error(`${warning_level}\t${cases[i].type}\t\t${cases[i].host}\n\t> Record Does Not Exist`);
+                        console.error(`${warning_level}\t${cases[i].type}\t\t${cases[i].host}\n\t> Record Does Not Exist\n`);
                     } else {
                         console.log(matchOutput(cases[i].type, cases[i], ret))
                     }
@@ -159,7 +159,7 @@ exports.Resolver = function resolve(cases) {
             case "SVR":
                 dns.resolveSvr(cases[i].host, (err, ret) => {
                     if(err) {
-                        console.error(`${warning_level}\t${cases[i].type}\t\t${cases[i].host}\n\t> Record Does Not Exist`);
+                        console.error(`${warning_level}\t${cases[i].type}\t\t${cases[i].host}\n\t> Record Does Not Exist\n`);
                     } else {
                         console.log(matchOutput(cases[i].type, cases[i], ret))
                     }
@@ -168,14 +168,14 @@ exports.Resolver = function resolve(cases) {
             case "TXT":
                 dns.resolveTxt(cases[i].host, (err, ret) => {
                     if(err) {
-                        console.error(`${warning_level}\t${cases[i].type}\t\t${cases[i].host}\n\t> Record Does Not Exist`);
+                        console.error(`${warning_level}\t${cases[i].type}\t\t${cases[i].host}\n\t> Record Does Not Exist\n`);
                     } else {
                         console.log(matchOutput(cases[i].type, cases[i], ret))
                     }
                 });
                 break;
             default:
-                console.error("Unknown Record type: ", cases[i].type, "\t", cases[i].host);
+                console.error(`${RED}FAILED${CLEAR}\tUnknown Record type: `, cases[i].type, "\t", cases[i].host, "\n");
 
         }
     }
