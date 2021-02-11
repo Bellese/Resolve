@@ -1,0 +1,38 @@
+[
+  {
+    "type": "NS",
+    "host": "google.com",
+    "expected_value": [
+      "ns1.google.com",
+      "ns2.google.com",
+      "ns3.google.com",
+      "ns4.google.com"
+    ],
+    "hard_fail": true
+  },
+  {
+    "type": "NS",
+    "host": "fail.google.com",
+    "expected_value": [
+      "ns.google.com"
+    ],
+    "hard_fail": true
+  },
+  {
+    "type": "A",
+    "host": "dns.google.com",
+    "expected_value": [
+      "8.8.8.8",
+      "8.8.4.4"
+    ],
+    "hard_fail": true
+  },
+  {
+    "type": "AAAA",
+    "host": "google.com",
+    "expected_value": [
+      "2607:f8b0:4004:810::200X"
+    ],
+    "hard_fail": false
+  }
+]

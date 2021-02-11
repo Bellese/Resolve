@@ -1,0 +1,12 @@
+{
+  "name": "resolve",
+  "version": "1.0.0",
+  "description": "A DNS testing application that matches DNS records against predefined expected output.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./app.js"
+  },
+  "author": "Mark Adkins (https://markadkins.design, @markadkn) at Bellese (https://bellese.io, @bellesetech)",
+  "license": "MIT"
+}
