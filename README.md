@@ -44,7 +44,7 @@ For example, to check Google's NS Records:
   },
 ```
 
-The `hard_fail` value determines if a warning or an error is thrown for the test case.  We can be used to easily distinguish essential and non-essential records in the output.
+The `hard_fail` value determines if a warning (`false`) or an error (`true`) is thrown for the test case.  We can be used to easily distinguish essential and non-essential records in the output.
 
 Resolve supports the following types of DNS records:
 - A
